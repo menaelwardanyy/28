@@ -1,0 +1,220 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+
+body {
+    height: 3000px;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #f3f6ff;
+    background:
+        radial-gradient(ellipse at top,
+            #10223b 0%,
+            #071426 70%);
+}
+
+/* Main heading */
+.main-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.main-title span {
+    color: #2f9bff;
+}
+
+.main-title .purple-text {
+    color: #a45bff;
+}
+
+.subtitle {
+    color: #a7bad7;
+    font-size: 1.1rem;
+}
+
+/* Main cards */
+.demo-card {
+    padding: 25px;
+    border: 1px solid #203b5e;
+    border-radius: 16px;
+
+    background: linear-gradient(145deg,
+            #0f2037,
+            #09172a);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Card headings */
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card-heading h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-heading p {
+    color: #d0dcf2;
+    margin-bottom: 0;
+}
+
+.blue-text {
+    color: #2f9bff;
+}
+
+.purple-text {
+    color: #a45bff;
+}
+
+/* Icons */
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.blue-bg {
+    background: linear-gradient(135deg, #1689ff, #2867e8);
+}
+
+.purple-bg {
+    background: linear-gradient(135deg, #bc55ff, #743ce8);
+}
+
+/* Interactive area */
+.demo-box {
+    padding: 25px 15px;
+    border: 1px solid #203b5e;
+    border-radius: 12px;
+
+    background: rgba(5, 17, 32, 0.4);
+}
+
+.welcome-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.demo-box h3 {
+    font-weight: bold;
+}
+
+.demo-box p {
+    color: #a7bad7;
+    margin-top: 10px;
+}
+
+/* Countdown progress */
+.timer-progress {
+    height: 7px;
+    max-width: 280px;
+    margin: 20px auto 12px;
+    background: #1a2e48;
+}
+
+.timer-progress .progress-bar {
+    background: linear-gradient(90deg, #2389ff, #a45bff);
+    transition: width 0.2s linear;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 25px;
+    background: #15314c;
+    color: #c5e1ff;
+    font-size: 0.85rem;
+}
+
+/* Clock */
+.clock-box {
+    padding-top: 20px;
+}
+
+.clock-icon {
+    color: #a45bff;
+    font-size: 3rem;
+}
+
+#clock {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-variant-numeric: tabular-nums;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: #109c6a;
+    border-color: #109c6a;
+}
+
+.btn-danger {
+    background: #ef4357;
+    border-color: #ef4357;
+}
+
+.btn-primary {
+    background: #2389ff;
+    border-color: #2389ff;
+}
+
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+    .demo-card {
+        padding: 17px;
+    }
+
+    .card-heading {
+        gap: 12px;
+    }
+
+    .icon-circle {
+        width: 52px;
+        height: 52px;
+        font-size: 2rem;
+    }
+
+    .card-heading h2 {
+        font-size: 1.35rem;
+    }
+
+    .demo-card .btn {
+        margin-top: 5px;
+    }
+}
